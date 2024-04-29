@@ -16,7 +16,7 @@ Link::~Link()
 
 void Link::master()
 {
-    if (ss->available() > 0) {
+    while (ss->available() > 0) {
         Serial.println((char)ss->read());
     }
 }
